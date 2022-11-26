@@ -1,15 +1,10 @@
 import pygame
-
 pygame.init()
 
-BLACK = (0, 0, 0)
-GRAY = (127, 127, 127)
 WHITE = (255, 255, 255)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
-PURPLE = (139,0,139)
-ToDo = 'Izdzer kafiju!'
+
+
+ToDo = input('what doing ')
 
 display = pygame.display.set_mode((500, 800))
 clock = pygame.time.Clock()
@@ -19,8 +14,8 @@ image = pygame.image.load("C:\\Users\\vinsi\\Downloads\\jacquard-idye-poly-viole
 display.blit(image, (0, 0))
 
 def print_text(text, position, font_size):
-    font = pygame.font.SysFont('Times New Roman', 24, True, False)
-    surface = font.render('Izder kafiju', True, WHITE)
+    font = pygame.font.SysFont('Times New Roman', 24, False, False)
+    surface = font.render(ToDo, False, WHITE)
     display.blit(surface, (0, 0))
 
 def game():
@@ -30,9 +25,6 @@ def game():
                 return
         print_text(ToDo, (200,200), 24)
         pygame.display.update()
-        clock.tick(FPS)
-
 
 game()
 pygame.quit()
-
