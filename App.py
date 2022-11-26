@@ -4,14 +4,9 @@ from kivy.uix.label import Label
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
-tasks = []
-with open('data.txt', 'r+') as f:
-    listpos = f.readline()
 class SayHello(App):
     def callback(self, instance):
         print(self.user.text)
-        with open('data.txt', 'a') as f:
-            f.append = self.user.text
 
     def build(self):
         self.window = GridLayout()
