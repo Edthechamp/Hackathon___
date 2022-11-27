@@ -34,7 +34,6 @@ class ToDoApp(App):
         # self.button.pos
         # self.button.bind(on_press=self.callback)
         # self.window.add_widget(self.button)
-        #
 
         return FloatLayout()
 
